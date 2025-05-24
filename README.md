@@ -135,5 +135,5 @@ fart-gym/
 
 ## 📬 Contacto
 
-Desarrollado por [Tu Nombre] – [tu.email@example.com]  
-Repositorio: https://github.com/tuusuario/fart-gym
+Desarrollado por [Daniel] – [daniel.sanchez.guti@gmail.com]  
+Repositorio: https://github.com/DanSan122/fart-gym
