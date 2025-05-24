@@ -51,8 +51,9 @@ function ClassesPage() {
   const handleRangeChange = (range) => {
     const start = Array.isArray(range) ? range[0] : range.start;
     const end = Array.isArray(range) ? range[range.length - 1] : range.end;
+    const BASE_URL = import.meta.env.VITE_API_URL;
 
-    fetch(`https://fart-gym.onrender.com/api/sesiones`)
+    fetch(`${BASE_URL}/sesiones`)
       .then(res => res.json())
       .then(data => {
         const eventos = data.map((sesion, index) => ({

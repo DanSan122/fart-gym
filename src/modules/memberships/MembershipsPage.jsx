@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
+const BASE_URL = import.meta.env.VITE_API_URL;
 
 function MembershipsPage() {
   const [searchParams] = useSearchParams();
@@ -9,7 +10,7 @@ function MembershipsPage() {
   useEffect(() => {
     if (!dni) return;
 
-    fetch(`https://fart-gym.onrender.com/api/membresias?dni=${dni}`)
+    fetch(`${BASE_URL}/membresias?dni=${dni}`)
       .then(res => res.json())
       .then(data => setMembresias(data))
       .catch(err => console.error('Error al cargar membresías:', err));

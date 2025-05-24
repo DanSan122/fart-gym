@@ -5,9 +5,10 @@ function ClientsPage() {
   const navigate = useNavigate();
   const [clientes, setClientes] = useState([]);
   const [filtro, setFiltro] = useState('');
+  const BASE_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
-    fetch('https://fart-gym.onrender.com/api/clientes')
+    fetch(`${BASE_URL}/clientes`)
       .then(res => res.json())
       .then(data => setClientes(data))
       .catch(err => console.error('Error al cargar clientes:', err));

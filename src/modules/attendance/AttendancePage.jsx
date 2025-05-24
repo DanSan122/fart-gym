@@ -12,7 +12,8 @@ function AttendancePage() {
   const cargarAsistenciasPorFecha = (fecha) => {
     const fechaUTC = new Date(`${fecha}T00:00:00Z`).toISOString().slice(0, 10);
 
-    fetch(`https://fart-gym.onrender.com/api/asistencias/lista?fecha=${fechaUTC}`)
+    const BASE_URL = import.meta.env.VITE_API_URL;
+    fetch(`${BASE_URL}/asistencias/lista?fecha=${fechaUTC}`)
       .then(res => res.json())
       .then(asistencias => {
         setAsistencias(asistencias);
