@@ -1,0 +1,96 @@
+[{
+  "_id": {
+    "$oid": "682a8a1b58460d9dbbdb09bb"
+  },
+  "clienteId": "6829572a58460d9dbbdb062d",
+  "sesionId": "682a608958460d9dbbdb0794",
+  "estado": "reservado"
+},
+{
+  "_id": {
+    "$oid": "682a8a1b58460d9dbbdb09bc"
+  },
+  "clienteId": "6829572a58460d9dbbdb0691",
+  "sesionId": "682a608958460d9dbbdb079a",
+  "estado": "reservado"
+},
+{
+  "_id": {
+    "$oid": "682a8a1b58460d9dbbdb09bd"
+  },
+  "clienteId": "6829572a58460d9dbbdb0677",
+  "sesionId": "682a608958460d9dbbdb0790",
+  "estado": "reservado"
+},
+{
+  "_id": {
+    "$oid": "682a8a1b58460d9dbbdb09be"
+  },
+  "clienteId": "6829572a58460d9dbbdb0649",
+  "sesionId": "682a608958460d9dbbdb0791",
+  "estado": "reservado"
+},
+{
+  "_id": {
+    "$oid": "682a8a1b58460d9dbbdb09bf"
+  },
+  "clienteId": "6829572a58460d9dbbdb0694",
+  "sesionId": "682a608958460d9dbbdb0797",
+  "estado": "reservado"
+},
+{
+  "_id": {
+    "$oid": "682a8a1b58460d9dbbdb09c1"
+  },
+  "clienteId": "6829572a58460d9dbbdb0663",
+  "sesionId": "682a608958460d9dbbdb078f",
+  "estado": "reservado"
+},
+{
+  "_id": {
+    "$oid": "682a8a1b58460d9dbbdb09c2"
+  },
+  "clienteId": "6829572a58460d9dbbdb06e5",
+  "sesionId": "682a608958460d9dbbdb0796",
+  "estado": "reservado"
+},
+{
+  "_id": {
+    "$oid": "682a8a1b58460d9dbbdb09c6"
+  },
+  "clienteId": "6829572a58460d9dbbdb0713",
+  "sesionId": "682a608958460d9dbbdb0795",
+  "estado": "reservado"
+},
+{
+  "_id": {
+    "$oid": "682a8a1b58460d9dbbdb09c9"
+  },
+  "clienteId": "6829572a58460d9dbbdb073e",
+  "sesionId": "682a608958460d9dbbdb0793",
+  "estado": "reservado"
+},
+{
+  "_id": {
+    "$oid": "682a8a1b58460d9dbbdb09cc"
+  },
+  "clienteId": "6829572a58460d9dbbdb06dc",
+  "sesionId": "682a608958460d9dbbdb079b",
+  "estado": "reservado"
+},
+{
+  "_id": {
+    "$oid": "682a8a1b58460d9dbbdb09d1"
+  },
+  "clienteId": "6829572a58460d9dbbdb0738",
+  "sesionId": "682a608958460d9dbbdb079c",
+  "estado": "reservado"
+},
+{
+  "_id": {
+    "$oid": "682a8a1b58460d9dbbdb09d3"
+  },
+  "clienteId": "6829572a58460d9dbbdb0675",
+  "sesionId": "682a608958460d9dbbdb078d",
+  "estado": "reservado"
+}]

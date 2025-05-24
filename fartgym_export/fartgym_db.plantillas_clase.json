@@ -1,0 +1,90 @@
+[{
+  "_id": {
+    "$oid": "682a53c258460d9dbbdb077d"
+  },
+  "nombre": "Baile Moderno",
+  "descripcion": "Clase con ritmos modernos para mejorar expresion y coordinacion.",
+  "duracionMin": 60,
+  "capacidadMax": 25
+},
+{
+  "_id": {
+    "$oid": "682a53c258460d9dbbdb077e"
+  },
+  "nombre": "Zumba",
+  "descripcion": "Entrenamiento cardiovascular con coreografias latinas.",
+  "duracionMin": 50,
+  "capacidadMax": 30
+},
+{
+  "_id": {
+    "$oid": "682a53c258460d9dbbdb077f"
+  },
+  "nombre": "Pilates",
+  "descripcion": "Fortalece el core y mejora la postura con ejercicios controlados.",
+  "duracionMin": 45,
+  "capacidadMax": 15
+},
+{
+  "_id": {
+    "$oid": "682a53c258460d9dbbdb0780"
+  },
+  "nombre": "CrossFit",
+  "descripcion": "Entrenamiento funcional de alta intensidad.",
+  "duracionMin": 60,
+  "capacidadMax": 20
+},
+{
+  "_id": {
+    "$oid": "682a53c258460d9dbbdb0781"
+  },
+  "nombre": "Functional Training",
+  "descripcion": "Ejercicios funcionales para movilidad y fuerza.",
+  "duracionMin": 45,
+  "capacidadMax": 20
+},
+{
+  "_id": {
+    "$oid": "682a53c258460d9dbbdb0782"
+  },
+  "nombre": "FullBody",
+  "descripcion": "Sesion intensa para trabajar todo el cuerpo.",
+  "duracionMin": 55,
+  "capacidadMax": 25
+},
+{
+  "_id": {
+    "$oid": "682a53c258460d9dbbdb0783"
+  },
+  "nombre": "ExLocal",
+  "descripcion": "Ejercicios localizados para abdomen, gluteos y piernas.",
+  "duracionMin": 40,
+  "capacidadMax": 18
+},
+{
+  "_id": {
+    "$oid": "682a53c258460d9dbbdb0784"
+  },
+  "nombre": "Twerk",
+  "descripcion": "Clase de baile que enfoca el movimiento en la zona de gluteos.",
+  "duracionMin": 50,
+  "capacidadMax": 20
+},
+{
+  "_id": {
+    "$oid": "682a53c258460d9dbbdb0785"
+  },
+  "nombre": "Baile",
+  "descripcion": "Clases generales de baile para todos los niveles.",
+  "duracionMin": 60,
+  "capacidadMax": 25
+},
+{
+  "_id": {
+    "$oid": "682a53c258460d9dbbdb0786"
+  },
+  "nombre": "Combat",
+  "descripcion": "Clase de combate fisico con musica para mejorar resistencia.",
+  "duracionMin": 60,
+  "capacidadMax": 30
+}]

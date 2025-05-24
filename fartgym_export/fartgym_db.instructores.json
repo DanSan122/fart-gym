@@ -1,0 +1,132 @@
+[{
+  "_id": {
+    "$oid": "682a2a1858460d9dbbdb0762"
+  },
+  "nombres": "Merche",
+  "apellidos": "Polo",
+  "correo": "merche.polo_pesas0@gmail.com",
+  "telefono": 921558064,
+  "especialidad": "Area de Pesas",
+  "activo": true
+},
+{
+  "_id": {
+    "$oid": "682a2a1858460d9dbbdb0763"
+  },
+  "nombres": "Juanito",
+  "apellidos": "Alcolea",
+  "correo": "juanito.alcolea_pesas1@gmail.com",
+  "telefono": 918784295,
+  "especialidad": "Area de Pesas",
+  "activo": true
+},
+{
+  "_id": {
+    "$oid": "682a2a1858460d9dbbdb0764"
+  },
+  "nombres": "Azeneth",
+  "apellidos": "Puig",
+  "correo": "azeneth.puig_pesas2@gmail.com",
+  "telefono": 966443641,
+  "especialidad": "Area de Pesas",
+  "activo": true
+},
+{
+  "_id": {
+    "$oid": "682a2a1858460d9dbbdb0765"
+  },
+  "nombres": "Sarita",
+  "apellidos": "Andrade",
+  "correo": "sarita.andrade_pesas3@gmail.com",
+  "telefono": 918606128,
+  "especialidad": "Area de Pesas",
+  "activo": true
+},
+{
+  "_id": {
+    "$oid": "682a2a1858460d9dbbdb0766"
+  },
+  "nombres": "Faustino",
+  "apellidos": "Correa",
+  "correo": "faustino.correa_pesas4@gmail.com",
+  "telefono": 998528574,
+  "especialidad": "Area de Pesas",
+  "activo": true
+},
+{
+  "_id": {
+    "$oid": "682a2a1858460d9dbbdb0767"
+  },
+  "nombres": "Domitila",
+  "apellidos": "Beltran",
+  "correo": "domitila.beltran_bailemoderno@gmail.com",
+  "telefono": 929242931,
+  "especialidad": "Baile Moderno, Twerk y Baile",
+  "activo": true
+},
+{
+  "_id": {
+    "$oid": "682a2a1858460d9dbbdb0768"
+  },
+  "nombres": "Amada",
+  "apellidos": "Marti",
+  "correo": "amada.marti_zumba@gmail.com",
+  "telefono": 939336857,
+  "especialidad": "Zumba",
+  "activo": true
+},
+{
+  "_id": {
+    "$oid": "682a2a1858460d9dbbdb0769"
+  },
+  "nombres": "Abilio",
+  "apellidos": "Losada",
+  "correo": "abilio.losada_pilates@gmail.com",
+  "telefono": 975807465,
+  "especialidad": "Pilates",
+  "activo": true
+},
+{
+  "_id": {
+    "$oid": "682a2a1858460d9dbbdb076a"
+  },
+  "nombres": "Leon",
+  "apellidos": "Burgos",
+  "correo": "leon.burgos_crossfit@gmail.com",
+  "telefono": 931980974,
+  "especialidad": "CrossFit y Combat",
+  "activo": true
+},
+{
+  "_id": {
+    "$oid": "682a2a1858460d9dbbdb076b"
+  },
+  "nombres": "Susanita",
+  "apellidos": "Olmedo",
+  "correo": "susanita.olmedo_functionaltraining@gmail.com",
+  "telefono": 986128905,
+  "especialidad": "Functional Training",
+  "activo": true
+},
+{
+  "_id": {
+    "$oid": "682a2a1858460d9dbbdb076c"
+  },
+  "nombres": "Nayara",
+  "apellidos": "Mendez",
+  "correo": "nayara.mendez_fullbody@gmail.com",
+  "telefono": 938839309,
+  "especialidad": "FullBody",
+  "activo": true
+},
+{
+  "_id": {
+    "$oid": "682a2a1858460d9dbbdb076d"
+  },
+  "nombres": "Bernardo",
+  "apellidos": "Sotelo",
+  "correo": "bernardo.sotelo_exlocal@gmail.com",
+  "telefono": 919428188,
+  "especialidad": "ExLocal",
+  "activo": true
+}]

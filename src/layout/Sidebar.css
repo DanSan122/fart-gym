@@ -1,0 +1,125 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 60px;
+  background-color: #222318;
+  color: white;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.sidebar:hover {
+  width: 170px;
+}
+
+.sidebar ul li a {
+  display: flex;
+  flex-direction: column;      /* 👈 Coloca el icono encima del texto */
+  align-items: center;         /* 👈 Centra horizontalmente */
+  justify-content: center;
+  gap: 6px;
+  color: #b4c638;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  white-space: nowrap;
+  padding: 10px 0;
+}
+
+
+.sidebar .icon {
+  width: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.sidebar .text {
+  text-align: center;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar:hover .text {
+  display: inline;
+  opacity: 1;
+  /*text-align: center;*/
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 40px; /* antes era 30px o menos */
+  width: 100%;
+}
+
+.text {
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.logo-img {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.nav-links {
+  padding-top: 20px; /* o más si quieres más separación */
+}
+
+.nav-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.nav-links ul li {
+  margin: 20px 0;
+  padding-left: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.nav-links ul li a {
+  color: #b4c638;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  align-self: start;
+}
+
+.nav-links ul li a:hover {
+  color: white;
+  align-self: center;
+}
+
+.social-icons {
+  margin-top: auto;           /* 👈 esto empuja hacia el fondo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0;
+}
+
+.social-icons img {
+  width: 25px;
+  height: 25px;
+  opacity: 0.7;
+}
+
+.sidebar:hover .social-icons img {
+  opacity: 1;
+  width: 35px;
+  height: 35px;
+}

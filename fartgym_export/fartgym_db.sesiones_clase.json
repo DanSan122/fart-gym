@@ -1,0 +1,162 @@
+[
+  {
+    "_id": {
+      "$oid": "682a608958460d9dbbdb078d"
+    },
+    "plantillaId": "682a53c258460d9dbbdb0786",
+    "instructorId": "682a2a1858460d9dbbdb0763",
+    "inicio": "2025-05-12T09:00:00",
+    "fin": "2025-05-12T10:00:00",
+    "estado": "programada"
+  },
+  {
+    "_id": {
+      "$oid": "682a608958460d9dbbdb078e"
+    },
+    "plantillaId": "682a53c258460d9dbbdb077f",
+    "instructorId": "682a2a1858460d9dbbdb0767",
+    "inicio": "2025-05-12T18:30:00",
+    "fin": "2025-05-12T19:30:00",
+    "estado": "programada"
+  },
+  {
+    "_id": {
+      "$oid": "682a608958460d9dbbdb078f"
+    },
+    "plantillaId": "682a53c258460d9dbbdb0781",
+    "instructorId": "682a2a1858460d9dbbdb0765",
+    "inicio": "2025-05-12T20:30:00",
+    "fin": "2025-05-12T21:30:00",
+    "estado": "programada"
+  },
+  {
+    "_id": {
+      "$oid": "682a608958460d9dbbdb0790"
+    },
+    "plantillaId": "682a53c258460d9dbbdb0780",
+    "instructorId": "682a2a1858460d9dbbdb076d",
+    "inicio": "2025-05-13T08:00:00",
+    "fin": "2025-05-13T09:00:00",
+    "estado": "programada"
+  },
+  {
+    "_id": {
+      "$oid": "682a608958460d9dbbdb0791"
+    },
+    "plantillaId": "682a53c258460d9dbbdb077d",
+    "instructorId": "682a2a1858460d9dbbdb076a",
+    "inicio": "2025-05-13T18:30:00",
+    "fin": "2025-05-13T19:30:00",
+    "estado": "programada"
+  },
+  {
+    "_id": {
+      "$oid": "682a608958460d9dbbdb0792"
+    },
+    "plantillaId": "682a53c258460d9dbbdb0783",
+    "instructorId": "682a2a1858460d9dbbdb0763",
+    "inicio": "2025-05-14T08:00:00",
+    "fin": "2025-05-14T09:00:00",
+    "estado": "programada"
+  },
+  {
+    "_id": {
+      "$oid": "682a608958460d9dbbdb0793"
+    },
+    "plantillaId": "682a53c258460d9dbbdb0784",
+    "instructorId": "682a2a1858460d9dbbdb076d",
+    "inicio": "2025-05-14T09:00:00",
+    "fin": "2025-05-14T10:00:00",
+    "estado": "programada"
+  },
+  {
+    "_id": {
+      "$oid": "682a608958460d9dbbdb0794"
+    },
+    "plantillaId": "682a53c258460d9dbbdb0786",
+    "instructorId": "682a2a1858460d9dbbdb0762",
+    "inicio": "2025-05-14T18:30:00",
+    "fin": "2025-05-14T19:30:00",
+    "estado": "programada"
+  },
+  {
+    "_id": {
+      "$oid": "682a608958460d9dbbdb0795"
+    },
+    "plantillaId": "682a53c258460d9dbbdb0784",
+    "instructorId": "682a2a1858460d9dbbdb0765",
+    "inicio": "2025-05-14T20:30:00",
+    "fin": "2025-05-14T21:30:00",
+    "estado": "programada"
+  },
+  {
+    "_id": {
+      "$oid": "682a608958460d9dbbdb0796"
+    },
+    "plantillaId": "682a53c258460d9dbbdb0786",
+    "instructorId": "682a2a1858460d9dbbdb0765",
+    "inicio": "2025-05-15T08:00:00",
+    "fin": "2025-05-15T09:00:00",
+    "estado": "programada"
+  },
+  {
+    "_id": {
+      "$oid": "682a608958460d9dbbdb0797"
+    },
+    "plantillaId": "682a53c258460d9dbbdb0782",
+    "instructorId": "682a2a1858460d9dbbdb0767",
+    "inicio": "2025-05-15T18:30:00",
+    "fin": "2025-05-15T19:30:00",
+    "estado": "programada"
+  },
+  {
+    "_id": {
+      "$oid": "682a608958460d9dbbdb0798"
+    },
+    "plantillaId": "682a53c258460d9dbbdb0782",
+    "instructorId": "682a2a1858460d9dbbdb0764",
+    "inicio": "2025-05-15T20:30:00",
+    "fin": "2025-05-15T21:30:00",
+    "estado": "programada"
+  },
+  {
+    "_id": {
+      "$oid": "682a608958460d9dbbdb0799"
+    },
+    "plantillaId": "682a53c258460d9dbbdb0780",
+    "instructorId": "682a2a1858460d9dbbdb076d",
+    "inicio": "2025-05-16T08:00:00",
+    "fin": "2025-05-16T09:00:00",
+    "estado": "programada"
+  },
+  {
+    "_id": {
+      "$oid": "682a608958460d9dbbdb079a"
+    },
+    "plantillaId": "682a53c258460d9dbbdb0786",
+    "instructorId": "682a2a1858460d9dbbdb076c",
+    "inicio": "2025-05-16T18:30:00",
+    "fin": "2025-05-16T19:30:00",
+    "estado": "programada"
+  },
+  {
+    "_id": {
+      "$oid": "682a608958460d9dbbdb079b"
+    },
+    "plantillaId": "682a53c258460d9dbbdb077e",
+    "instructorId": "682a2a1858460d9dbbdb0766",
+    "inicio": "2025-05-17T08:00:00",
+    "fin": "2025-05-17T09:00:00",
+    "estado": "programada"
+  },
+  {
+    "_id": {
+      "$oid": "682a608958460d9dbbdb079c"
+    },
+    "plantillaId": "682a53c258460d9dbbdb077d",
+    "instructorId": "682a2a1858460d9dbbdb076a",
+    "inicio": "2025-05-17T09:00:00",
+    "fin": "2025-05-17T10:00:00",
+    "estado": "programada"
+  }
+]

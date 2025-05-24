@@ -1,0 +1,200 @@
+[{
+  "_id": {
+    "$oid": "682ab7e458460d9dbbdb09da"
+  },
+  "clienteId": "6829572a58460d9dbbdb06a5",
+  "fecha": {
+    "$date": "2025-05-19T00:00:00.000Z"
+  },
+  "asistio": true
+},
+{
+  "_id": {
+    "$oid": "682ab7e458460d9dbbdb09db"
+  },
+  "clienteId": "6829572a58460d9dbbdb06a6",
+  "fecha": {
+    "$date": "2025-05-19T00:00:00.000Z"
+  },
+  "asistio": true
+},
+{
+  "_id": {
+    "$oid": "682ab7e458460d9dbbdb09dc"
+  },
+  "clienteId": "6829572a58460d9dbbdb06e8",
+  "fecha": {
+    "$date": "2025-05-19T00:00:00.000Z"
+  },
+  "asistio": true
+},
+{
+  "_id": {
+    "$oid": "682ab7e458460d9dbbdb09dd"
+  },
+  "clienteId": "6829572a58460d9dbbdb0715",
+  "fecha": {
+    "$date": "2025-05-19T00:00:00.000Z"
+  },
+  "asistio": true
+},
+{
+  "_id": {
+    "$oid": "682ab7e458460d9dbbdb09de"
+  },
+  "clienteId": "6829572a58460d9dbbdb0647",
+  "fecha": {
+    "$date": "2025-05-19T00:00:00.000Z"
+  },
+  "asistio": true
+},
+{
+  "_id": {
+    "$oid": "682ab7e458460d9dbbdb09df"
+  },
+  "clienteId": "6829572a58460d9dbbdb066c",
+  "fecha": {
+    "$date": "2025-05-19T00:00:00.000Z"
+  },
+  "asistio": true
+},
+{
+  "_id": {
+    "$oid": "682ab7e458460d9dbbdb09e0"
+  },
+  "clienteId": "6829572a58460d9dbbdb06af",
+  "fecha": {
+    "$date": "2025-05-19T00:00:00.000Z"
+  },
+  "asistio": true
+},
+{
+  "_id": {
+    "$oid": "682ab7e458460d9dbbdb09e1"
+  },
+  "clienteId": "6829572a58460d9dbbdb072f",
+  "fecha": {
+    "$date": "2025-05-19T00:00:00.000Z"
+  },
+  "asistio": true
+},
+{
+  "_id": {
+    "$oid": "682ab7e458460d9dbbdb09e2"
+  },
+  "clienteId": "6829572a58460d9dbbdb06ef",
+  "fecha": {
+    "$date": "2025-05-19T00:00:00.000Z"
+  },
+  "asistio": true
+},
+{
+  "_id": {
+    "$oid": "682ab7e458460d9dbbdb09e3"
+  },
+  "clienteId": "6829572a58460d9dbbdb067e",
+  "fecha": {
+    "$date": "2025-05-19T00:00:00.000Z"
+  },
+  "asistio": true
+},
+{
+  "_id": {
+    "$oid": "682ab7e458460d9dbbdb09e4"
+  },
+  "clienteId": "6829572a58460d9dbbdb0713",
+  "fecha": {
+    "$date": "2025-05-19T00:00:00.000Z"
+  },
+  "asistio": true
+},
+{
+  "_id": {
+    "$oid": "682ab7e458460d9dbbdb09e5"
+  },
+  "clienteId": "6829572a58460d9dbbdb074c",
+  "fecha": {
+    "$date": "2025-05-19T00:00:00.000Z"
+  },
+  "asistio": true
+},
+{
+  "_id": {
+    "$oid": "682ab7e458460d9dbbdb09e6"
+  },
+  "clienteId": "6829572a58460d9dbbdb06f7",
+  "fecha": {
+    "$date": "2025-05-19T00:00:00.000Z"
+  },
+  "asistio": true
+},
+{
+  "_id": {
+    "$oid": "682ab7e458460d9dbbdb09e7"
+  },
+  "clienteId": "6829572a58460d9dbbdb0696",
+  "fecha": {
+    "$date": "2025-05-19T00:00:00.000Z"
+  },
+  "asistio": true
+},
+{
+  "_id": {
+    "$oid": "682ab7e458460d9dbbdb09e8"
+  },
+  "clienteId": "6829572a58460d9dbbdb0689",
+  "fecha": {
+    "$date": "2025-05-19T00:00:00.000Z"
+  },
+  "asistio": true
+},
+{
+  "_id": {
+    "$oid": "682ab7e458460d9dbbdb09e9"
+  },
+  "clienteId": "6829572a58460d9dbbdb06ee",
+  "fecha": {
+    "$date": "2025-05-19T00:00:00.000Z"
+  },
+  "asistio": true
+},
+{
+  "_id": {
+    "$oid": "682ab7e458460d9dbbdb09ea"
+  },
+  "clienteId": "6829572a58460d9dbbdb06ed",
+  "fecha": {
+    "$date": "2025-05-19T00:00:00.000Z"
+  },
+  "asistio": true
+},
+{
+  "_id": {
+    "$oid": "682ab7e458460d9dbbdb09eb"
+  },
+  "clienteId": "6829572a58460d9dbbdb074e",
+  "fecha": {
+    "$date": "2025-05-19T00:00:00.000Z"
+  },
+  "asistio": true
+},
+{
+  "_id": {
+    "$oid": "682ab7e458460d9dbbdb09ec"
+  },
+  "clienteId": "6829572a58460d9dbbdb0722",
+  "fecha": {
+    "$date": "2025-05-19T00:00:00.000Z"
+  },
+  "asistio": true
+},
+{
+  "_id": {
+    "$oid": "682ab7e458460d9dbbdb09ed"
+  },
+  "clienteId": "6829572a58460d9dbbdb06e9",
+  "fecha": {
+    "$date": "2025-05-19T00:00:00.000Z"
+  },
+  "asistio": true
+}]
