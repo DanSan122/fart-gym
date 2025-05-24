@@ -39,6 +39,11 @@ app.use('/api/asistencias', asistenciaRoutes);
 const sesionRoutes = require('./routes/sesion.routes');
 app.use('/api/sesiones', sesionRoutes);
 
+//ruta usuarios
+const usuarioRoutes = require('./routes/usuario.routes');
+app.use('/api/usuarios', usuarioRoutes);
+
+
 
 
 app.listen(process.env.PORT, () => {

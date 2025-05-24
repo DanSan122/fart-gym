@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import './LoginPage.css';
-import logo from '../assets/fart-logo.png'; // ✅ logo importado correctamente
+import logo from '../assets/fart-logo.png';
 
 function LoginPage() {
   const [user, setUser] = useState('');
@@ -10,15 +10,34 @@ function LoginPage() {
   const navigate = useNavigate();
   const { login } = useAuth();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (user === 'admin' && pass === 'admin123') {
+
+    if (!user.trim() || !pass.trim()) {
+      alert('Por favor, completa todos los campos');
+      return;
+    }
+
+    try {
+      const response = await fetch('http://localhost:5000/api/usuarios/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ usuario: user, contrasena: pass })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.mensaje || 'Error en el inicio de sesión');
+      }
+
       login();
       navigate('/clientes');
-    } else {
-      alert('Credenciales inválidas');
+    } catch (error) {
+      alert(error.message);
     }
   };
+
 
   return (
     <div className="login-page">
@@ -49,8 +68,8 @@ function LoginPage() {
               onChange={(e) => setPass(e.target.value)}
             />
             <div className="login-options">
-                <label><input type="checkbox" /> Recordarme</label>
-                <a href="#">¿Olvidaste tu contraseña?</a>
+              <label><input type="checkbox" /> Recordarme</label>
+              <a href="#">¿Olvidaste tu contraseña?</a>
             </div>
             <button type="submit">Ingresar</button>
           </form>

@@ -1,0 +1,27 @@
+[
+  {
+    "usuario": "admin",
+    "contrasena": "admin123"
+  },
+  {
+    "usuario": "entrenador1",
+    "contrasena": "fuerza2025"
+  },
+  {
+    "usuario": "nutricionista",
+    "contrasena": "dietaFit"
+  },
+  {
+    "usuario": "gerencia",
+    "contrasena": "supervisor"
+  },
+  {
+    "usuario": "daniel",
+    "contrasena": "rosadita"
+  },
+  {
+    "usuario": "daniela",
+    "contrasena": "furros2024"
+  }
+
+]
