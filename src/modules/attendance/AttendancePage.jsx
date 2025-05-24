@@ -12,7 +12,7 @@ function AttendancePage() {
   const cargarAsistenciasPorFecha = (fecha) => {
     const fechaUTC = new Date(`${fecha}T00:00:00Z`).toISOString().slice(0, 10);
 
-    fetch(`http://localhost:5000/api/asistencias/lista?fecha=${fechaUTC}`)
+    fetch(`https://fart-gym.onrender.com/api/asistencias/lista?fecha=${fechaUTC}`)
       .then(res => res.json())
       .then(asistencias => {
         setAsistencias(asistencias);

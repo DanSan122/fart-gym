@@ -9,7 +9,7 @@ function MembershipsPage() {
   useEffect(() => {
     if (!dni) return;
 
-    fetch(`http://localhost:5000/api/membresias?dni=${dni}`)
+    fetch(`https://fart-gym.onrender.com/api/membresias?dni=${dni}`)
       .then(res => res.json())
       .then(data => setMembresias(data))
       .catch(err => console.error('Error al cargar membresías:', err));

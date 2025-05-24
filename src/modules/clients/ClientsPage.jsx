@@ -7,7 +7,7 @@ function ClientsPage() {
   const [filtro, setFiltro] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/clientes')
+    fetch('https://fart-gym.onrender.com/api/clientes')
       .then(res => res.json())
       .then(data => setClientes(data))
       .catch(err => console.error('Error al cargar clientes:', err));

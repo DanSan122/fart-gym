@@ -52,7 +52,7 @@ function ClassesPage() {
     const start = Array.isArray(range) ? range[0] : range.start;
     const end = Array.isArray(range) ? range[range.length - 1] : range.end;
 
-    fetch(`http://localhost:5000/api/sesiones`)
+    fetch(`https://fart-gym.onrender.com/api/sesiones`)
       .then(res => res.json())
       .then(data => {
         const eventos = data.map((sesion, index) => ({
