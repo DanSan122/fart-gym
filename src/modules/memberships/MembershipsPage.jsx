@@ -5,6 +5,8 @@ const BASE_URL = import.meta.env.VITE_API_URL;
 function MembershipsPage() {
   const [searchParams] = useSearchParams();
   const dni = searchParams.get('dni');
+
+  const [cliente, setCliente] = useState(null);
   const [membresias, setMembresias] = useState([]);
 
   useEffect(() => {
@@ -12,7 +14,10 @@ function MembershipsPage() {
 
     fetch(`${BASE_URL}/membresias?dni=${dni}`)
       .then(res => res.json())
-      .then(data => setMembresias(data))
+      .then(data => {
+        setCliente(data.cliente);
+        setMembresias(data.membresias);
+      })
       .catch(err => console.error('Error al cargar membresías:', err));
   }, [dni]);
 
@@ -20,7 +25,11 @@ function MembershipsPage() {
 
   return (
     <div className="main-content">
-      <h2>Membresías para DNI: {dni}</h2>
+      <h2>
+        Membresías para DNI: {dni}
+        {cliente && ` - ${cliente.nombres} ${cliente.apellidos}`}
+      </h2>
+
       <table>
         <thead>
           <tr>

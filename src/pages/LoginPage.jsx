@@ -4,6 +4,8 @@ import { useAuth } from '../context/AuthContext';
 import './LoginPage.css';
 import logo from '../assets/fart-logo.png';
 
+import { BASE_URL } from '../config';//esto eliminar
+
 function LoginPage() {
   const [user, setUser] = useState('');
   const [pass, setPass] = useState('');
@@ -19,7 +21,9 @@ function LoginPage() {
     }
 
     try {
-      const BASE_URL = import.meta.env.VITE_API_URL;
+      //const BASE_URL = import.meta.env.VITE_API_URL;
+      
+
       const response = await fetch(`${BASE_URL}/usuarios/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

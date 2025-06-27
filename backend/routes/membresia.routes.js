@@ -14,7 +14,14 @@ router.get('/', async (req, res) => {
     const clienteId = cliente._id.toString();
     const membresias = await Membresia.find({ clienteId });
 
-    res.json(membresias);
+    res.json({
+      cliente: {
+        dni: cliente.dni,
+        nombres: cliente.nombres,
+        apellidos: cliente.apellidos
+      },
+      membresias
+    });
   } catch (err) {
     console.error('Error en /api/membresias:', err);
     res.status(500).json({ error: 'Error interno del servidor' });

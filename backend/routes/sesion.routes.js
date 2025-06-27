@@ -56,4 +56,16 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.post('/', async (req, res) => {
+  const nuevaSesion = new Sesion(req.body);
+  await nuevaSesion.save();
+  res.json({ mensaje: 'Sesión registrada con éxito' });
+});
+
+router.delete('/:id', async (req, res) => {
+  await Sesion.findByIdAndDelete(req.params.id);
+  res.json({ mensaje: 'Sesión eliminada correctamente' });
+});
+
+
 module.exports = router;

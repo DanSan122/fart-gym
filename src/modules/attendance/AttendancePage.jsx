@@ -24,8 +24,27 @@ function AttendancePage() {
   const handleToggle = (index) => {
     const updated = [...asistencias];
     updated[index].asistio = !updated[index].asistio;
+
+    const { clienteId, fecha, asistio } = updated[index];
+
+    // Actualiza en estado local
     setAsistencias(updated);
+
+    // Actualiza en la base de datos inmediatamente
+    fetch(`${import.meta.env.VITE_API_URL}/asistencias/marcar`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ clienteId, fecha, asistio })
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log('✅ Asistencia actualizada:', data.mensaje);
+      })
+      .catch(err => {
+        console.error('Error al actualizar asistencia:', err);
+      });
   };
+
 
   const formatUTCDate = (fechaISO) => {
     const fecha = new Date(fechaISO);
@@ -108,16 +127,26 @@ function AttendancePage() {
       </table>
 
       <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'space-between' }}>
-        <button onClick={handleGuardar} style={{
-          backgroundColor: '#b4c638',
-          color: '#222318',
-          padding: '10px 20px',
-          border: 'none',
-          borderRadius: '5px',
-          fontWeight: 'bold'
-        }}>
-          Guardar asistencia
+        <button
+          onClick={handleGuardar}
+          style={{
+            background: 'linear-gradient(135deg, #748c34, #748c34)',
+            color: '#1a1a1a',
+            padding: '12px 24px',
+            border: 'none',
+            borderRadius: '8px',
+            fontWeight: '600',
+            fontSize: '16px',
+            boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
+            transition: 'all 0.2s ease-in-out',
+            cursor: 'pointer'
+          }}
+          onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.03)'}
+          onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+        >
+          💾 Guardar asistencia
         </button>
+
 
         <div style={{ textAlign: 'right' }}>
           <p>✅ Asistieron: <strong>{asistieron}</strong></p>

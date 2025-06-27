@@ -10,7 +10,7 @@ const locales = { es };
 const localizer = dateFnsLocalizer({
   format,
   parse,
-  startOfWeek: () => 1, // lunes
+  startOfWeek: () => 1,
   getDay,
   locales,
 });
@@ -22,21 +22,12 @@ const colores = {
   bootcamp: '#39c06b',
 };
 
-const eventStyleGetter = (event) => ({
-  style: {
-    backgroundColor: colores[event.tipo] || '#ccc',
-    color: '#fff',
-    borderRadius: '6px',
-    padding: '4px',
-    border: 'none',
-  },
-});
-
 function ClassesPage() {
   const [events, setEvents] = useState([]);
   const [currentDate, setCurrentDate] = useState(new Date());
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedClase, setSelectedClase] = useState(null);
+  const [instructores, setInstructores] = useState([]);
 
   const [formData, setFormData] = useState({
     tipo: 'duo',
@@ -48,9 +39,13 @@ function ClassesPage() {
     cupo: 10,
   });
 
+  const handleNavigate = (date) => {
+    setCurrentDate(date);
+    handleRangeChange({ start: date });
+  };
+
   const handleRangeChange = (range) => {
     const start = Array.isArray(range) ? range[0] : range.start;
-    const end = Array.isArray(range) ? range[range.length - 1] : range.end;
     const BASE_URL = import.meta.env.VITE_API_URL;
 
     fetch(`${BASE_URL}/sesiones`)
@@ -72,42 +67,50 @@ function ClassesPage() {
       .catch(err => console.error('Error cargando sesiones:', err));
   };
 
-
-  const handleNavigate = (date) => {
-    setCurrentDate(date);
-    handleRangeChange({ start: date });
-  };
-
   const handleEventClick = (event) => {
     setSelectedClase(event);
     setModalOpen(true);
   };
 
-  useEffect(() => {
-    handleRangeChange({ start: currentDate });
-  }, []);
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const { tipo, instructor, fecha, horaInicio, horaFin, inscritos, cupo } = formData;
 
-    const start = new Date(`${fecha}T${horaInicio}`);
-    const end = new Date(`${fecha}T${horaFin}`);
+    const inicio = new Date(`${fecha}T${horaInicio}`);
+    const fin = new Date(`${fecha}T${horaFin}`);
 
-    if (new Date(end) <= new Date(start)) {
+    if (fin <= inicio) {
       alert('La hora de fin debe ser posterior a la de inicio.');
       return;
     }
 
-    const nuevoEvento = {
-      id: `temp-${Date.now()}`,
-      title: `${inscritos}/${cupo} ${tipo.charAt(0).toUpperCase() + tipo.slice(1)} - ${instructor}`,
-      start,
-      end,
-      tipo,
+    const BASE_URL = import.meta.env.VITE_API_URL;
+
+    const nuevaSesion = {
+      clase: tipo,
+      descripcionClase: `${tipo} con ${instructor}`,
+      nombreInstructor: instructor,
+      inicio,
+      fin,
+      capacidadMax: parseInt(cupo),
+      inscritos: parseInt(inscritos),
+      estado: 'programada'
     };
 
-    setEvents([...events, nuevoEvento]);
+    try {
+      const res = await fetch(`${BASE_URL}/sesiones`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(nuevaSesion)
+      });
+
+      const data = await res.json();
+      alert('✅ Clase registrada: ' + data.mensaje);
+      handleRangeChange({ start: currentDate });
+    } catch (err) {
+      console.error('Error al guardar clase:', err);
+      alert('❌ Error al guardar la clase');
+    }
 
     setFormData({
       tipo: 'duo',
@@ -120,6 +123,25 @@ function ClassesPage() {
     });
   };
 
+  useEffect(() => {
+    handleRangeChange({ start: currentDate });
+
+    fetch(`${import.meta.env.VITE_API_URL}/instructores`)
+      .then(res => res.json())
+      .then(data => setInstructores(data))
+      .catch(err => console.error('Error al cargar instructores:', err));
+  }, []);
+
+  const eventStyleGetter = (event) => ({
+    style: {
+      backgroundColor: colores[event.tipo] || '#ccc',
+      color: '#fff',
+      borderRadius: '6px',
+      padding: '4px',
+      border: 'none',
+    },
+  });
+
   return (
     <div className="main-content" style={{ padding: '20px' }}>
       <h2>Clases Grupales</h2>
@@ -131,7 +153,14 @@ function ClassesPage() {
           <option value="kickboxing">Kickboxing</option>
           <option value="bootcamp">Bootcamp</option>
         </select>
-        <input type="text" placeholder="Instructor" value={formData.instructor} onChange={(e) => setFormData({ ...formData, instructor: e.target.value })} required />
+        <select value={formData.instructor} onChange={(e) => setFormData({ ...formData, instructor: e.target.value })} required>
+          <option value="">-- Selecciona un instructor --</option>
+          {instructores.map((inst) => (
+            <option key={inst._id} value={`${inst.nombres} ${inst.apellidos}`}>
+              {inst.nombres} {inst.apellidos}
+            </option>
+          ))}
+        </select>
         <input type="date" value={formData.fecha} onChange={(e) => setFormData({ ...formData, fecha: e.target.value })} required />
         <input type="time" value={formData.horaInicio} onChange={(e) => setFormData({ ...formData, horaInicio: e.target.value })} required />
         <input type="time" value={formData.horaFin} onChange={(e) => setFormData({ ...formData, horaFin: e.target.value })} required />
@@ -182,12 +211,33 @@ function ClassesPage() {
               <tr><td><strong>Capacidad:</strong></td><td>{selectedClase.capacidadMax}</td></tr>
             </tbody>
           </table>
-
-
         )}
         <button onClick={() => setModalOpen(false)} style={{ marginTop: '15px', padding: '5px 15px' }}>
           Cerrar
         </button>
+        {selectedClase && (
+          <button
+            onClick={async () => {
+              if (!window.confirm('¿Estás seguro de eliminar esta clase?')) return;
+
+              try {
+                const res = await fetch(`${import.meta.env.VITE_API_URL}/sesiones/${selectedClase.id}`, {
+                  method: 'DELETE'
+                });
+                const data = await res.json();
+                alert('🗑️ Clase eliminada: ' + data.mensaje);
+                setModalOpen(false);
+                handleRangeChange({ start: currentDate });
+              } catch (err) {
+                console.error('Error al eliminar clase:', err);
+                alert('❌ Error al eliminar la clase');
+              }
+            }}
+            style={{ marginTop: '10px', padding: '5px 15px', backgroundColor: '#dc3545', color: 'white', border: 'none', borderRadius: '5px' }}
+          >
+            Eliminar clase
+          </button>
+        )}
       </Modal>
     </div>
   );
