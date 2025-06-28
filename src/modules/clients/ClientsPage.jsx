@@ -1,11 +1,13 @@
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import React from 'react';
 
 function ClientsPage() {
   const navigate = useNavigate();
   const [clientes, setClientes] = useState([]);
   const [filtro, setFiltro] = useState('');
-  const BASE_URL = import.meta.env.VITE_API_URL;
+  const BASE_URL = process.env.VITE_API_URL || 'http://localhost:5000/api';
+
 
   useEffect(() => {
     fetch(`${BASE_URL}/clientes`)

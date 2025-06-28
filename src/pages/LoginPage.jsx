@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import './LoginPage.css';
 import logo from '../assets/fart-logo.png';
+import React from 'react';
 
 import { BASE_URL } from '../config';//esto eliminar
 
@@ -54,7 +55,8 @@ function LoginPage() {
       </div>
       <div className="login-right">
         <div className="form-container">
-          <img src={logo} alt="Fart Gym" className="logo-login" />
+          <img src={logo || undefined} alt="Fart Gym" className="logo-login" />
+
           <p className="tagline">Actitud, energía y constancia 💪</p>
           <h2>Iniciar sesión</h2>
           <form onSubmit={handleSubmit}>

@@ -7,4 +7,9 @@ module.exports = {
   transform: {
     '^.+\\.(js|jsx)$': 'babel-jest',
   },
+  test: {
+  globals: true,
+  environment: 'jsdom',
+  },
+
 };

@@ -1,12 +1,25 @@
-import { render, screen, fireEvent } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
-import LoginPage from './LoginPage';
+// ✅ Soporte para Node.js y jsdom
+global.TextEncoder = require('util').TextEncoder;
+global.TextDecoder = require('util').TextDecoder;
+
+// ✅ Imports en formato CommonJS
+const React = require('react');
+const { render, screen, fireEvent } = require('@testing-library/react');
+const { BrowserRouter } = require('react-router-dom');
+const LoginPage = require('./LoginPage').default;
+
+// resto de tu código...
 
 // Mock del contexto AuthContext
 jest.mock('../config', () => ({
   BASE_URL: 'http://localhost:5000/api'
 }));
 
+jest.mock('../context/AuthContext', () => ({
+  useAuth: () => ({
+    login: jest.fn(),
+  }),
+}));
 
 
 // Mock de fetch (para evitar error aunque no se use)
